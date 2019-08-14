@@ -24,11 +24,11 @@ class SeriousTemplateProcessor extends TemplateProcessor
                 $template = 'tpl-' . $doc['template'];
                 break;
             case $this->core['view']->exists($templateAlias):
-                $className = 'Serious\\Controllers\\' . ucfirst($templateAlias) . 'Controller';
+                $className = $this->core->getConfig('seriousTemplateNamespace') . ucfirst($templateAlias) . 'Controller';
                 if (class_exists($className)) { //Проверяем есть ли контроллер по алиасу
                     $customClass = new $className();
                 } else { //Если нет, то дёргаем только BaseController
-                    $className = 'Serious\\Controllers\\BaseController';
+                    $className = $this->core->getConfig('seriousTemplateNamespace') . 'BaseController';
                     $customClass = new $className();
                 }
                 $template = $templateAlias;
