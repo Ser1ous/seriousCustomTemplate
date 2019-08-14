@@ -2,11 +2,10 @@
 
 namespace Serious\Controllers;
 
-class TestController extends MainController
+class TestController extends BaseController
 {
-    public function render()
+    public function render()  //Пример для вывода данных
     {
         $this->data['test'] = 'test';
-        $this->modx->addDataToView($this->data);
     }
 }

@@ -25,9 +25,11 @@ class SeriousTemplateProcessor extends TemplateProcessor
                 break;
             case $this->core['view']->exists($templateAlias):
                 $className = 'Serious\\Controllers\\' . ucfirst($templateAlias) . 'Controller';
-                if (class_exists($className)) {
+                if (class_exists($className)) { //Проверяем есть ли контроллер по алиасу
                     $customClass = new $className();
-                    $customClass->render();
+                } else { //Если нет, то дёргаем только BaseController
+                    $className = 'Serious\\Controllers\\BaseController';
+                    $customClass = new $className();
                 }
                 $template = $templateAlias;
                 break;
