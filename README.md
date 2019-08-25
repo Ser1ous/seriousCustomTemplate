@@ -1,7 +1,7 @@
 # seriousCustomTemplate
 Custom template service provider for evo 2.0
 
-##Install
+## Install
 
 Change you **composer.json** from **core/custom** path
 
@@ -11,7 +11,7 @@ Go to you **core/** folder and run `composer upd`
 
 Add `['seriousTemplateNamespace' => 'Serious\\Controllers\\']` element like this to **core/custom/config/cms/settings.php** file.
 
-##Установка  
+## Установка  
 
 Измените Ваш **composer.json** из папки **core/custom**
 
