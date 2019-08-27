@@ -19,4 +19,4 @@ Add `['seriousTemplateNamespace' => 'Serious\\Controllers\\']` element like this
 
 Перейдите в папку **core/**  и запустите `composer upd`
 
-После добавьте элемент массива похожи на этот `['seriousTemplateNamespace' => 'Serious\\Controllers\\']`. В файл **core/custom/config/cms/settings.php**.
+После добавьте элемент массива похожий на этот `['seriousTemplateNamespace' => 'Serious\\Controllers\\']`. В файл **core/custom/config/cms/settings.php**.
