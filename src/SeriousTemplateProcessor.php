@@ -28,7 +28,9 @@ class SeriousTemplateProcessor extends TemplateProcessor
                 $baseClassName = $this->core->getConfig('seriousTemplateNamespace') . 'BaseController';
                 if (class_exists($baseClassName)) { //Проверяем есть ли Base класс
                     $classArray = explode('.', $templateAlias);
-                    $classArray=array_map(function($item){ return ucfirst(trim($item)); }, $classArray);
+                    $classArray = array_map(function ($item) {
+                        return ucfirst(trim($item));
+                    }, $classArray);
                     $classViewPart = implode('.', $classArray);
                     $className = str_replace('.', '\\', $classViewPart);
                     $className = $this->core->getConfig('seriousTemplateNamespace') . ucfirst($className) . 'Controller';
