@@ -6,13 +6,14 @@ use EvolutionCMS\TemplateProcessor;
 
 class SeriousTemplateProcessor extends TemplateProcessor
 {
-
+    /**
+     * @return bool|mixed|string
+     */
     public function getBladeDocumentContent()
     {
         $template = false;
         $doc = $this->core->documentObject;
         $templateAlias = SiteTemplate::select('templatealias')->find($doc['template'])->templatealias;
-
         switch (true) {
             case $this->core['view']->exists('tpl-' . $doc['template'] . '_doc-' . $doc['id']):
                 $template = 'tpl-' . $doc['template'] . '_doc-' . $doc['id'];
@@ -24,11 +25,16 @@ class SeriousTemplateProcessor extends TemplateProcessor
                 $template = 'tpl-' . $doc['template'];
                 break;
             case $this->core['view']->exists($templateAlias):
-                $className = $this->core->getConfig('seriousTemplateNamespace') . ucfirst($templateAlias) . 'Controller';
-                if (class_exists($className)) { //Проверяем есть ли контроллер по алиасу
-                    $customClass = new $className();
-                } else { //Если нет, то дёргаем только BaseController
-                    $className = $this->core->getConfig('seriousTemplateNamespace') . 'BaseController';
+                $baseClassName = $this->core->getConfig('seriousTemplateNamespace') . 'BaseController';
+                if (class_exists($baseClassName)) { //Проверяем есть ли Base класс
+                    $classArray = explode('.', $templateAlias);
+                    $classArray=array_map(function($item){ return ucfirst(trim($item)); }, $classArray);
+                    $classViewPart = implode('.', $classArray);
+                    $className = str_replace('.', '\\', $classViewPart);
+                    $className = $this->core->getConfig('seriousTemplateNamespace') . ucfirst($className) . 'Controller';
+                    if (!class_exists($className)) { //Проверяем есть ли контроллер по алиасу, если нет, то помещаем Base
+                        $className = $baseClassName;
+                    }
                     $customClass = new $className();
                 }
                 $template = $templateAlias;
