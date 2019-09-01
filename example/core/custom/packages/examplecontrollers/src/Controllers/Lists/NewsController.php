@@ -1,5 +1,5 @@
 <?php
-
+//Контроллер для шаблона с alias lists.news
 namespace EvolutionCMS\Example\Controllers\Lists;
 
 use EvolutionCMS\Example\Controllers\BaseController;
