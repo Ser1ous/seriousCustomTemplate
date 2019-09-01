@@ -3,7 +3,7 @@
 namespace EvolutionCMS\Example\Controllers;
 
 use Illuminate\Support\Facades\Cache;
-
+//Базовый класс который занимается обработкой/кэшированием и прочими вещами.
 class BaseController
 {
     public $data = [];
