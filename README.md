@@ -9,7 +9,7 @@ Custom template service provider for evo 2.0
 
 3) Go to you **core/** folder and run `composer upd`
 
-4) Just answer the questions in you command line
+4) Run `php artisan sct:install` Just answer the questions in you command line
 
 ## Установка  
 
@@ -19,4 +19,4 @@ Custom template service provider for evo 2.0
 
 3) Перейдите в папку **core/**  и запустите `composer upd`
 
-4) Просто отвечайте на вопросы из Вашей командной строки.
+4) Запустите `php artisan sct:install` Просто отвечайте на вопросы из Вашей командной строки.
