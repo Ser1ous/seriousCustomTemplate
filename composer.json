@@ -1,6 +1,12 @@
 {
   "name": "ser1ous/serious-custom-template",
   "license": "MIT",
+  "authors": [
+    {
+      "name": "Alexander Pashkevich",
+      "email": "sertious2008.wortk3@gmail.com"
+    }
+  ],
   "require": {
 
   },
