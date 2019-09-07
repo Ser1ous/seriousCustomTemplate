@@ -12,6 +12,9 @@
     "laravel": {
       "providers": [
         "EvolutionCMS\\SeriousCustom\\SeriousCustomTemplateServiceProvider"
+      ],
+      "commands": [
+        {"sct:install": []}
       ]
 
     }

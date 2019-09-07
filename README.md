@@ -3,20 +3,20 @@ Custom template service provider for evo 2.0
 
 ## Install
 
-Change you **composer.json** from **core/custom** path
+1) Change you **composer.json** from **core/custom** path
 
-Add `"ser1ous/serious-custom-template": "*"` to you **require** part
+2) Add `"ser1ous/serious-custom-template": "*"` to you **require** part
 
-Go to you **core/** folder and run `composer upd`
+3) Go to you **core/** folder and run `composer upd`
 
-Add `['seriousTemplateNamespace' => 'Serious\\Controllers\\']` element like this to **core/custom/config/cms/settings.php** file.
+4) Just answer the questions in you command line
 
 ## Установка  
 
-Измените Ваш **composer.json** из папки **core/custom**
+1) Измените Ваш **composer.json** из папки **core/custom**
 
-Добавьте `"ser1ous/serious-custom-template": "*"` в Вашу **require** часть
+2) Добавьте `"ser1ous/serious-custom-template": "*"` в Вашу **require** часть
 
-Перейдите в папку **core/**  и запустите `composer upd`
+3) Перейдите в папку **core/**  и запустите `composer upd`
 
-После добавьте элемент массива похожий на этот `['seriousTemplateNamespace' => 'Serious\\Controllers\\']`. В файл **core/custom/config/cms/settings.php**.
+4) Просто отвечайте на вопросы из Вашей командной строки.
