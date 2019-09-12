@@ -3,8 +3,10 @@ Custom template service provider for evo 2.0
 
 ## Install
 
-Just run `php artisan package:installrequire ser1ous/serious-custom-template '*'` in you **core** folder
+1) `php artisan package:installrequire ser1ous/serious-custom-template '*'` in you **core/** folder
+2) `php artisan sct:install` 
 
 ## Установка  
 
-Просто запустите `php artisan package:installrequire ser1ous/serious-custom-template '*'` в папке **core**
+1) `php artisan package:installrequire ser1ous/serious-custom-template '*'` в папке **core/**
+2) `php artisan sct:install`
