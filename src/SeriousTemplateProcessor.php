@@ -13,6 +13,7 @@ class SeriousTemplateProcessor extends TemplateProcessor
     {
         $template = false;
         $doc = $this->core->documentObject;
+        if ($doc['template'] == 0) return $template;
         $templateAlias = SiteTemplate::select('templatealias')->find($doc['template'])->templatealias;
         switch (true) {
             case $this->core['view']->exists('tpl-' . $doc['template'] . '_doc-' . $doc['id']):
