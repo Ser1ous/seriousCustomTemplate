@@ -1,5 +1,5 @@
-# seriousCustomTemplate 
-DEPRICATED NOW USE https://github.com/ZeeyN/evocms-custom-template
+# DEPRICATED seriousCustomTemplate 
+# NOW USE https://github.com/ZeeyN/evocms-custom-template
 
 # EvoCustomTemplate
 Custom template service provider for evo 2.0
